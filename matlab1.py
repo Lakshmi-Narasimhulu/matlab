@@ -6,13 +6,22 @@ b=int(input("Enter number2"))
 add=a+b
 print("sum",add)
 #3.division of two real numbers
-c=int(input("Enter number"))
-d=int(input("Enter number"))
-if((type(a)=='int' or 'float') and (type(b)=='int' or 'float')):
-	div=a/b
-	print("division",div)
+def inf(a):
+  try:
+    if "." in a:
+      return float(a)
+    else:
+      return int(a)
+  except ValueError:
+    return a
+a=input("Num 1")
+b=input("Num 2")
+a=inf(a)
+b=inf(b)
+if (type(a) == int or type(a) == float) and (type(b) == int or type(b) == float):
+    print("TRUE")
 else:
-	print("not real numbers")
+    print("UR INPUTS AREN'T REAL NUMBERS")
 #4.dot product of two vectors
 n=int(input("Enter elements in a list"))
 list=[]
